@@ -1,0 +1,14 @@
+.border {
+    border-style: solid;
+    border-color: blue;
+}
+
+.design {
+    border-style: solid;
+    border-color: red;
+}
+
+.display{
+    border-style: solid;
+    border-color: green;
+}

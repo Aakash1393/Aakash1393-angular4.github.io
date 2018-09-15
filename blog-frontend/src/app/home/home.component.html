@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <!-- <script src="node_modules/systemjs/dist/system.src.js"></script>
+<script src="systemjs.config.js"></script> -->
+<div class="container" style="text-align:center">
+  <div class="row" style="text-align: center">
+    <div class="col-md-12" style="font-size:22px">All Blogs</div>
+      <br><br><br>  
+  </div>
+  <div class="row" style="text-align:center">
+    <div *ngFor="let character of allDetails.characters" class="col-md-6">
+      <div class="panel panel-default border border-success">
+         
+        <div class="panel-heading">{{character.aliases}}
+
+        </div>
+        
+        <div class="panel-body">
+          <p>{{character.culture}} </p>
+          <p>{{character.playedBy}} </p>
+          <p>{{character.gender}} </p>
+        </div>
+        <!-- <a [routerLink]="['/blog']" class="btn btn-primary"  id="coolbutton">Read</a>  -->
+        <!-- <input type="button" value="Details" id="coolbutton"> -->
+        <a [routerLink]="['/blog',character.url]" class="btn btn-primary">Read</a>
+      <br/><br/>
+      </div>  
+      
+    </div>
+    <div *ngFor="let book of allDetails.books" class="col-md-6">
+      <div class="panel panel-default border border-danger design">
+        <div class="panel-heading">{{book.name}}</div>
+        <div class="panel-body">
+          <p>{{book.country}} </p>
+          <p>{{book.publisher}} </p>
+          <p>{{book.mediaType}} </p>
+        </div>
+      </div>  
+    </div>
+    <div *ngFor="let house of allDetails.houses" class="col-md-12">
+      <div class="panel panel-default border border-danger display">
+        <div class="panel-heading">{{house.name}}</div>
+        <div class="panel-body">
+          <p>{{house.coatOfArms}} </p>
+          <p>{{house.region}} </p>
+        </div>
+      </div>  
+      
+    </div>
+  </div>
+</div>      
+ 
+
+</html>
